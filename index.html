@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+        .outer{
+            height: 100vh;
+            width: 100%;
+            border-bottom: 2px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            background-color: purple;
+            color: wheat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box-1{
+            animation: bounce 3s ease infinite;
+        }
+        .box-2{
+            animation: bounce 3s ease-in infinite;
+        }
+        .box-3{
+            animation: bounce 3s ease-out infinite;
+        }
+        .box-4{
+            animation: bounce 3s ease-in-out infinite;
+        }
+        .box-5{
+            animation: bounce 3s linear infinite;
+        }
+        .box-6{
+            animation: bounce 3s cubic-bezier(.22,.68,.91,.39) infinite;
+        }
+        @keyframes bounce {
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-100px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+
+        }
+
+
+
+    </style>
+</head>
+<body >
+<div class="outer">
+    <div class="box box-1">ease</div>
+    <div class="box box-2">ease-in</div>
+    <div class="box box-3">ease-out</div>
+    <div class="box box-4">ease-in-out</div>
+    <div class="box box-5">linear</div>
+    <div class="box box-6">customize</div>
+</div>
+
+</body>
+</html>
